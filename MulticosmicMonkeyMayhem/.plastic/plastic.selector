@@ -1,0 +1,4 @@
+repository "MulticosmicMonkeyMayhem@ArtificeJojo@cloud"
+  path "/"
+    br "/main"
+    co "/main"
