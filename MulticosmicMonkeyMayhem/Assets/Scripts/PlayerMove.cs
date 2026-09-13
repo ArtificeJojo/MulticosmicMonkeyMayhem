@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    private Rigidbody rb;
+
+    public int speed;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -15,22 +18,22 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.up * Time.deltaTime);
+            rb.AddForce(Vector3.up * speed);
         }
         
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.down * Time.deltaTime);
+            rb.AddForce(Vector3.down * speed);
         }
         
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * Time.deltaTime);
+            rb.AddForce(Vector3.left * speed);
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * Time.deltaTime);
+            rb.AddForce(Vector3.right * speed);
         }
     }
 }
