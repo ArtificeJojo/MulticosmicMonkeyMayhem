@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject asteroid1;
+    private MoveObj moveObj;
     
     private float minX = -25.37f, maxX = 25.55f, minY = -8.45f, maxY = 14.24f;
     private float zVal = 92.3f;
@@ -19,9 +20,8 @@ public class SpawnObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(objNo < 5)
+        if (objNo < 5)
             SpawnObj();
-        
     }
 
     void SpawnObj()
