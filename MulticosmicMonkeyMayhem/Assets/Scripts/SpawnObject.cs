@@ -33,5 +33,5 @@ public class SpawnObject : MonoBehaviour
         Vector3 pos = new Vector3(x,y,z);
         Instantiate(asteroid1, pos, Quaternion.identity);
         objNo++;
-    }s
+    }
 }

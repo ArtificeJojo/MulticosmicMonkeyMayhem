@@ -12,9 +12,18 @@ public class MoveObj : MonoBehaviour
         transform.Translate(0, 0, -.01f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        GameObject.Destroy(gameObject);
-        Debug.Log("Collision");
+        if (collision.gameObject.tag == "Wall")
+        {
+            GameObject.Destroy(gameObject);
+            Debug.Log("Collision");
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Player Hit!");
+            GameObject.Destroy(gameObject);
+        }
+        
     }
 }
