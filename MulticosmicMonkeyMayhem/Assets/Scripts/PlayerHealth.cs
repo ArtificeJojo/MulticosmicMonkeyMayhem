@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     //Add ui
 
-    public int health = 10;
+    public int health = 1;
     MoveObj moveObj;
     // Start is called before the first frame update
     void Start()
@@ -17,11 +18,17 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health <= 0)
+            Destroy(gameObject);
     }
 
-    private void HandleCollision(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name + "collided");
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            health--;
+            Debug.Log("Health : " + health);
+            GameObject.Destroy(collision.gameObject);
+        }
     }
 }

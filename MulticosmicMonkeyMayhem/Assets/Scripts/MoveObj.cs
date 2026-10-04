@@ -17,13 +17,6 @@ public class MoveObj : MonoBehaviour
         if (collision.gameObject.tag == "Wall")
         {
             GameObject.Destroy(gameObject);
-            Debug.Log("Collision");
         }
-        else if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("Player Hit!");
-            GameObject.Destroy(gameObject);
-        }
-        
     }
 }
