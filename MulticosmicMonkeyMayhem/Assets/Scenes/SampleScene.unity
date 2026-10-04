@@ -1779,6 +1779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7198439256451527824, guid: 1f9b85cfcd6cb1b458f377b27ef06afe, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8005178707977598636, guid: 1f9b85cfcd6cb1b458f377b27ef06afe, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1829,7 +1833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8005178707977598640, guid: 1f9b85cfcd6cb1b458f377b27ef06afe, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f9b85cfcd6cb1b458f377b27ef06afe, type: 3}
